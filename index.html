@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Continuous Integration and Deployent w/ Codeship</title>
+
+		<meta name="description" content="A 5min talk about continuous integration and deployent w/ Codeship">
+		<meta name="author" content="Richard Sentino">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>CI & Deployment w/ Codeship</h1>
+					<h3>A quick introduction</h3>
+					<p>
+						<small>Richard Sentino / <a href="http://twitter.com/mindginative">@mindginative</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Target Audience</h2>
+					<ul>
+						<li>New Codeship</li>
+						<li>Beginners of continuous integration and deployment</li>
+						<li>Looking to explore alternative CI & deployment tools</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Your Setup</h2>
+					<img src="images/your-setup.png">
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Room For Improvement</h2>
+						<p class="fragment">Needs automation BUT use less (<u>at least for now</u>):</p>
+						<ul>
+							<li class="fragment">Advanced configuration management tools</li>
+							<li class="fragment">Deployment frameworks</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section id="fragments">
+						<h2>Room For Improvement</h2>
+						<p>Leverage existing skills & tools</p>
+						<ul class="fragment">
+							<li>Bash Scripts</li>
+							<li>CLI</li>
+							<li>SCP/SFTP/RSYNC</li>
+							<li>SSH</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-background="white">
+					<img src="images/logo_codeship_colour.png">
+				</section>
+
+				<section>
+					<h2>Codeship</h2>
+					<ul>
+						<li>A hosted continuous integration and deployment software as a service (SaaS) for web applications.</li>
+						<li>Simple pricing: free (<u>no CC required</u>), basic, pro</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Codeship</h2>
+					<img src="images/codeship-setup.png">
+				</section>
+
+				<section>
+					<h2>Codeship - Pipeline</h2>
+					<img src="images/codeship-pipeline.png">
+				</section>
+
+				<section>
+					<h2>Codeship - Supported Technologies</h2>
+					<img src="images/codeship-stuff.png">
+				</section>
+
+				<section>
+					<h2>Deployment Dashboard Example</h2>
+					<img src="images/codeship-deployment-dashboard.png">
+				</section>
+
+				<section>
+					<h2>At the end of the day</h2>
+					<h3>We want to:</h3>
+					<ul>
+						<li>do quick software releases</li>
+						<li>do multiple deployments per day</li>
+						<li>automate integration and deployment</li>
+						<li>save time and money</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Booktrack &#10084; Codeship</h2>
+					<ul>
+						<li>
+							Pipeline
+							<ul>
+								<li>prod, dev, demo</li>
+							</ul>
+						</li>
+						<li>
+							Front-end
+							<ul>
+								<li>NodeJS, GulpJS, PhantomJS</li>
+							</ul>
+						</li>
+						<li>
+							Average Daily Deployment
+							<ul>
+								<li>15/day</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Thank You!</h2>
+					<p>
+						<small>Richard Sentino / <a href="http://www.booktrack.com/">booktrack.com</a> / <a href="https://twitter.com/mindginative">@mindginative</a></small>
+					</p>
+					<p>
+						<small>Try <a href="http://www.codeship.io">codeship.io</a></small>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
